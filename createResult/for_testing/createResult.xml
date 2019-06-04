@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>createResult</name>
+    </assembly>
+    <members>
+        <member name="T:createResult.classifier">
+            <summary>
+            The classifier class provides a CLS compliant, MWArray interface to the MATLAB
+            functions contained in the files:
+            <newpara></newpara>
+            D:\小黑屋\matlab小黑屋\graduation project\createResult.m
+            <newpara></newpara>
+            D:\小黑屋\matlab小黑屋\graduation project\trainClassifier.m
+            </summary>
+            <remarks>
+            @Version 4.0
+            </remarks>
+        </member>
+        <member name="M:createResult.classifier.#cctor">
+            <summary internal= "true">
+            The static constructor instantiates and initializes the MATLAB Runtime instance.
+            </summary>
+        </member>
+        <member name="M:createResult.classifier.#ctor">
+            <summary>
+            Constructs a new instance of the classifier class.
+            </summary>
+        </member>
+        <member name="M:createResult.classifier.Finalize">
+            <summary internal= "true">
+            Class destructor called by the CLR garbage collector.
+            </summary>
+        </member>
+        <member name="M:createResult.classifier.Dispose">
+            <summary>
+            Frees the native resources associated with this object
+            </summary>
+        </member>
+        <member name="M:createResult.classifier.Dispose(System.Boolean)">
+            <summary internal= "true">
+            Internal dispose function
+            </summary>
+        </member>
+        <member name="M:createResult.classifier.createResult">
+             <summary>
+             Provides a single output, 0-input MWArrayinterface to the createResult MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.createResult(MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a single output, 1-input MWArrayinterface to the createResult MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="classifier">Input argument #1</param>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.createResult(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a single output, 2-input MWArrayinterface to the createResult MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="classifier">Input argument #1</param>
+             <param name="input">Input argument #2</param>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.createResult(System.Int32)">
+             <summary>
+             Provides the standard 0-input MWArray interface to the createResult MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.createResult(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 1-input MWArray interface to the createResult MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="classifier">Input argument #1</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.createResult(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 2-input MWArray interface to the createResult MATLAB
+             function.
+             </summary>
+             <remarks>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="classifier">Input argument #1</param>
+             <param name="input">Input argument #2</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.createResult(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray[]@,MathWorks.MATLAB.NET.Arrays.MWArray[])">
+             <summary>
+             Provides an interface for the createResult function in which the input and output
+             arguments are specified as an array of MWArrays.
+             </summary>
+             <remarks>
+             This method will allocate and return by reference the output argument
+             array.<newpara></newpara>
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return</param>
+             <param name= "argsOut">Array of MWArray output arguments</param>
+             <param name= "argsIn">Array of MWArray input arguments</param>
+            
+        </member>
+        <member name="M:createResult.classifier.trainClassifier">
+             <summary>
+             Provides a single output, 0-input MWArrayinterface to the trainClassifier MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
+             returns a trained classifier and its accuracy. This code recreates the
+             classification model trained in Classification Learner app. Use the
+             generated code to automate training the same model with new data, or to
+             learn how to programmatically train models.
+             Input:
+             trainingData: a matrix with the same number of columns and data type
+             as imported into the app.
+             Output:
+             trainedClassifier: a struct containing the trained classifier. The
+             struct contains various fields with information about the trained
+             classifier.
+             trainedClassifier.predictFcn: a function to make predictions on new
+             data.
+             validationAccuracy: a double containing the accuracy in percent. In
+             the app, the History list displays this overall accuracy score for
+             each model.
+             Use the code to train the model with new data. To retrain your
+             classifier, call the function from the command line with your original
+             data or new data as the input argument trainingData.
+             For example, to retrain a classifier trained with the original data set
+             T, enter:
+             [trainedClassifier, validationAccuracy] = trainClassifier(T)
+             To make predictions with the returned 'trainedClassifier' on new data T2,
+             use
+             yfit = trainedClassifier.predictFcn(T2)
+             T2 must be a matrix containing only the predictor columns used for
+             training. For details, enter:
+             trainedClassifier.HowToPredict
+             </remarks>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.trainClassifier(MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a single output, 1-input MWArrayinterface to the trainClassifier MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
+             returns a trained classifier and its accuracy. This code recreates the
+             classification model trained in Classification Learner app. Use the
+             generated code to automate training the same model with new data, or to
+             learn how to programmatically train models.
+             Input:
+             trainingData: a matrix with the same number of columns and data type
+             as imported into the app.
+             Output:
+             trainedClassifier: a struct containing the trained classifier. The
+             struct contains various fields with information about the trained
+             classifier.
+             trainedClassifier.predictFcn: a function to make predictions on new
+             data.
+             validationAccuracy: a double containing the accuracy in percent. In
+             the app, the History list displays this overall accuracy score for
+             each model.
+             Use the code to train the model with new data. To retrain your
+             classifier, call the function from the command line with your original
+             data or new data as the input argument trainingData.
+             For example, to retrain a classifier trained with the original data set
+             T, enter:
+             [trainedClassifier, validationAccuracy] = trainClassifier(T)
+             To make predictions with the returned 'trainedClassifier' on new data T2,
+             use
+             yfit = trainedClassifier.predictFcn(T2)
+             T2 must be a matrix containing only the predictor columns used for
+             training. For details, enter:
+             trainedClassifier.HowToPredict
+             </remarks>
+             <param name="trainingData">Input argument #1</param>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.trainClassifier(System.Int32)">
+             <summary>
+             Provides the standard 0-input MWArray interface to the trainClassifier MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
+             returns a trained classifier and its accuracy. This code recreates the
+             classification model trained in Classification Learner app. Use the
+             generated code to automate training the same model with new data, or to
+             learn how to programmatically train models.
+             Input:
+             trainingData: a matrix with the same number of columns and data type
+             as imported into the app.
+             Output:
+             trainedClassifier: a struct containing the trained classifier. The
+             struct contains various fields with information about the trained
+             classifier.
+             trainedClassifier.predictFcn: a function to make predictions on new
+             data.
+             validationAccuracy: a double containing the accuracy in percent. In
+             the app, the History list displays this overall accuracy score for
+             each model.
+             Use the code to train the model with new data. To retrain your
+             classifier, call the function from the command line with your original
+             data or new data as the input argument trainingData.
+             For example, to retrain a classifier trained with the original data set
+             T, enter:
+             [trainedClassifier, validationAccuracy] = trainClassifier(T)
+             To make predictions with the returned 'trainedClassifier' on new data T2,
+             use
+             yfit = trainedClassifier.predictFcn(T2)
+             T2 must be a matrix containing only the predictor columns used for
+             training. For details, enter:
+             trainedClassifier.HowToPredict
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.trainClassifier(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides the standard 1-input MWArray interface to the trainClassifier MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
+             returns a trained classifier and its accuracy. This code recreates the
+             classification model trained in Classification Learner app. Use the
+             generated code to automate training the same model with new data, or to
+             learn how to programmatically train models.
+             Input:
+             trainingData: a matrix with the same number of columns and data type
+             as imported into the app.
+             Output:
+             trainedClassifier: a struct containing the trained classifier. The
+             struct contains various fields with information about the trained
+             classifier.
+             trainedClassifier.predictFcn: a function to make predictions on new
+             data.
+             validationAccuracy: a double containing the accuracy in percent. In
+             the app, the History list displays this overall accuracy score for
+             each model.
+             Use the code to train the model with new data. To retrain your
+             classifier, call the function from the command line with your original
+             data or new data as the input argument trainingData.
+             For example, to retrain a classifier trained with the original data set
+             T, enter:
+             [trainedClassifier, validationAccuracy] = trainClassifier(T)
+             To make predictions with the returned 'trainedClassifier' on new data T2,
+             use
+             yfit = trainedClassifier.predictFcn(T2)
+             T2 must be a matrix containing only the predictor columns used for
+             training. For details, enter:
+             trainedClassifier.HowToPredict
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="trainingData">Input argument #1</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:createResult.classifier.trainClassifier(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray[]@,MathWorks.MATLAB.NET.Arrays.MWArray[])">
+             <summary>
+             Provides an interface for the trainClassifier function in which the input and
+             output
+             arguments are specified as an array of MWArrays.
+             </summary>
+             <remarks>
+             This method will allocate and return by reference the output argument
+             array.<newpara></newpara>
+             M-Documentation:
+             [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
+             returns a trained classifier and its accuracy. This code recreates the
+             classification model trained in Classification Learner app. Use the
+             generated code to automate training the same model with new data, or to
+             learn how to programmatically train models.
+             Input:
+             trainingData: a matrix with the same number of columns and data type
+             as imported into the app.
+             Output:
+             trainedClassifier: a struct containing the trained classifier. The
+             struct contains various fields with information about the trained
+             classifier.
+             trainedClassifier.predictFcn: a function to make predictions on new
+             data.
+             validationAccuracy: a double containing the accuracy in percent. In
+             the app, the History list displays this overall accuracy score for
+             each model.
+             Use the code to train the model with new data. To retrain your
+             classifier, call the function from the command line with your original
+             data or new data as the input argument trainingData.
+             For example, to retrain a classifier trained with the original data set
+             T, enter:
+             [trainedClassifier, validationAccuracy] = trainClassifier(T)
+             To make predictions with the returned 'trainedClassifier' on new data T2,
+             use
+             yfit = trainedClassifier.predictFcn(T2)
+             T2 must be a matrix containing only the predictor columns used for
+             training. For details, enter:
+             trainedClassifier.HowToPredict
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return</param>
+             <param name= "argsOut">Array of MWArray output arguments</param>
+             <param name= "argsIn">Array of MWArray input arguments</param>
+            
+        </member>
+        <member name="M:createResult.classifier.WaitForFiguresToDie">
+             <summary>
+             This method will cause a MATLAB figure window to behave as a modal dialog box.
+             The method will not return until all the figure windows associated with this
+             component have been closed.
+             </summary>
+             <remarks>
+             An application should only call this method when required to keep the
+             MATLAB figure window from disappearing.  Other techniques, such as calling
+             Console.ReadLine() from the application should be considered where
+             possible.</remarks>
+            
+        </member>
+    </members>
+</doc>
